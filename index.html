@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Health Expert System</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- WELCOME SCREEN -->
+    <section id="welcomeScreen" class="screen active">
+
+        <div class="welcome-container">
+
+            <div class="brand">
+                <div class="brand-icon">✚</div>
+                <span>Health Expert System</span>
+            </div>
+
+            <div class="welcome-content">
+
+                <div class="welcome-text">
+
+                    <div class="tag">
+                        <span class="tag-dot"></span>
+                        HEALTH ASSISTANCE SYSTEM
+                    </div>
+
+                    <h1>
+                        Understand your symptoms.
+                        <span>Take care of your health.</span>
+                    </h1>
+
+                    <p>
+                        An interactive expert system that analyzes
+                        selected symptoms and provides possible
+                        health findings based on predefined rules.
+                    </p>
+
+                    <div class="name-input-container">
+
+                        <label for="userName">What should we call you?</label>
+
+                        <input
+                            type="text"
+                            id="userName"
+                            placeholder="Enter your name"
+                        >
+
+                        <button id="welcomeButton">
+                            Get Started
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                    <div class="welcome-note">
+                        <span>ⓘ</span>
+                        Educational purposes only. Not a substitute
+                        for professional medical advice.
+                    </div>
+
+                </div>
+
+                <div class="welcome-illustration">
+
+                    <div class="illustration-circle">
+
+                        <div class="medical-cross">✚</div>
+
+                        <div class="floating-card card-one">
+                            <span>♡</span>
+                            Health
+                        </div>
+
+                        <div class="floating-card card-two">
+                            <span>✓</span>
+                            Symptoms
+                        </div>
+
+                        <div class="floating-card card-three">
+                            <span>✦</span>
+                            Expert System
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="welcome-footer">
+                <span>HEALTH EXPERT SYSTEM</span>
+                <span>Rule-Based Artificial Intelligence</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SYMPTOM CHECKER SCREEN -->
+    <section id="checkerScreen" class="screen">
+
+        <div class="main-container">
+
+            <!-- HEADER -->
+            <header class="main-header">
+
+                <div class="brand">
+                    <div class="brand-icon">✚</div>
+                    <span>Health Expert System</span>
+                </div>
+
+                <div class="header-user">
+                    <div class="user-avatar">♡</div>
+                    <span id="displayName">User</span>
+                </div>
+
+            </header>
+
+
+            <!-- INTRODUCTION -->
+            <div class="page-intro">
+
+                <div class="tag">
+                    <span class="tag-dot"></span>
+                    SYMPTOM ANALYSIS
+                </div>
+
+                <h1>
+                    How are you <span>feeling today?</span>
+                </h1>
+
+                <p>
+                    Select all the symptoms you are experiencing.
+                    Our system will analyze your selections using
+                    its knowledge base and inference rules.
+                </p>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+            <div class="progress-container">
+
+                <div class="progress-info">
+                    <span>STEP 1 OF 2</span>
+                    <span>Symptom Selection</span>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+
+            </div>
+
+
+            <!-- SYMPTOM SECTION -->
+            <div class="symptom-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <h2>Select your symptoms</h2>
+                        <p>Choose all that apply to your condition.</p>
+                    </div>
+
+                    <div class="selected-count">
+                        <span id="selectedCount">0</span>
+                        selected
+                    </div>
+
+                </div>
+
+
+                <!-- SYMPTOMS -->
+                <div class="symptom-grid">
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="fever">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">🌡️</div>
+                            <span>Fever</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="cough">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">😷</div>
+                            <span>Cough</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="sneezing">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">🤧</div>
+                            <span>Sneezing</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="runny nose">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">💧</div>
+                            <span>Runny Nose</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="sore throat">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">🗣️</div>
+                            <span>Sore Throat</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="headache">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">🤕</div>
+                            <span>Headache</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="itchy eyes">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">👁️</div>
+                            <span>Itchy Eyes</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="stomach pain">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">🫄</div>
+                            <span>Stomach Pain</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="diarrhea">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">💊</div>
+                            <span>Diarrhea</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="difficulty breathing">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">🫁</div>
+                            <span>Difficulty Breathing</span>
+                        </div>
+                    </label>
+
+                    <label class="symptom-card">
+                        <input type="checkbox" value="chest pain">
+                        <div class="symptom-content">
+                            <div class="symptom-icon">❤️</div>
+                            <span>Chest Pain</span>
+                        </div>
+                    </label>
+
+                </div>
+
+
+                <!-- BUTTONS -->
+                <div class="action-area">
+
+                    <button id="checkButton" class="primary-button">
+                        Analyze Symptoms
+                        <span>→</span>
+                    </button>
+
+                    <button id="resetButton" class="secondary-button">
+                        Clear Selection
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+            <div class="disclaimer">
+
+                <div class="disclaimer-icon">ⓘ</div>
+
+                <div>
+                    <strong>Important Notice</strong>
+
+                    <p>
+                        This system is intended for educational purposes.
+                        Its findings are based on predefined rules and
+                        should not be considered a medical diagnosis.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <footer class="main-footer">
+                <span>HEALTH EXPERT SYSTEM</span>
+                <span>Knowledge-Based System</span>
+            </footer>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTS MODAL -->
+    <div id="resultsModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-button">
+                ×
+            </button>
+
+            <div class="result-header">
+
+                <div class="result-icon">✚</div>
+
+                <div class="tag">
+                    ANALYSIS COMPLETE
+                </div>
+
+                <h2>
+                    Your possible <span>findings</span>
+                </h2>
+
+                <p id="resultGreeting">
+                    Here are the results based on your selected symptoms.
+                </p>
+
+            </div>
+
+
+            <div class="result-body">
+
+                <div class="result-summary">
+
+                    <div>
+                        <span class="summary-label">SYMPTOMS SELECTED</span>
+                        <strong id="resultCount">0</strong>
+                    </div>
+
+                    <div>
+                        <span class="summary-label">RULES MATCHED</span>
+                        <strong id="ruleCount">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div id="findingsContainer" class="findings-container">
+                </div>
+
+
+                <div class="recommendation-box">
+
+                    <div class="recommendation-icon">💡</div>
+
+                    <div>
+                        <strong>General Recommendation</strong>
+
+                        <p>
+                            Monitor your symptoms and maintain proper
+                            hydration and rest. If symptoms persist,
+                            worsen, or cause concern, consult a qualified
+                            healthcare professional.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="result-disclaimer">
+
+                    <span>ⓘ</span>
+
+                    <p>
+                        These are possible findings generated by
+                        predefined rules. They are not confirmed
+                        diagnoses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button id="tryAgainButton" class="primary-button">
+                    Check Again
+                    <span>↻</span>
+                </button>
+
+                <button id="finishButton" class="secondary-button">
+                    Finish
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONNECT JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
